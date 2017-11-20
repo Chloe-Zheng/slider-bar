@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slider-bar</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/1.9.1.min.js"></script>
+	<script src="js/slider-bar.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div class="exchange-item clearfix">
+			<div id="sliderBarBuy"></div>
+		</div>
+		<div class="exchange-item clearfix">
+			<div id="sliderBarSell"></div>
+		</div>
+	</div>
+</body>
+<script>
+	// 买的滑动杠杆
+	var buyConfig = {
+	   type: 'buy',
+	   width: 240 ,
+	   containerId: 'sliderBarBuy'
+	};
+
+	sliderBarBuy = new TradeSliderBar(buyConfig);
+
+	sliderBarBuy.onPercentChange(function(percent) {
+		/*$('#exch-buy .hide_num').show();
+
+		var percentNum = toDecimal(trade_buy_max * percent * 0.01, number_float);
+		$('#bnumber').val(percentNum);
+		Trust.sumPrice('b', percentNum, $('#bprice').val(), price_float);*/
+	});
+
+
+	// 卖的滑动杠杆
+	var sellConfig = {
+	   type: 'sell',
+	   width: 240 ,
+	   containerId: 'sliderBarSell'
+	};
+
+	sliderBarSell = new TradeSliderBar(sellConfig);
+
+	sliderBarSell.onPercentChange(function(percent) {
+		/*$('#exch-sell .hide_num').show();
+
+		var trade_sell_max = parseFloat($('#sale_max').html());
+		var percentNum = toDecimal(trade_sell_max * percent * 0.01, number_float);
+		$('#snumber').val(percentNum);
+		Trust.sumPrice('s', percentNum, $('#sprice').val(), price_float);*/
+	});
+
+</script>
+</html>

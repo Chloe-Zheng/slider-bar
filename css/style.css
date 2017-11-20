@@ -1,0 +1,95 @@
+html,body{
+	background: #1e1e1e;
+}
+.main{
+	width: 1200px;
+	height: 400px;
+	margin:0 auto;
+	padding-top: 300px;
+}
+.exchange-item{
+	width: 245px;
+	height: 30px;
+	position: relative;
+	margin:20px auto;
+}
+/**滑动杠杆开始**/
+.trade_slider_bar {
+	width: 240px;
+	position: relative;
+	margin: 0 auto;
+}
+.slider_body {
+	width: 240px;
+	height: 3px;
+	margin-top:15px;
+    line-height: 15px;
+    background: #b9b9b9;
+    float: left;
+    position: relative;
+    outline: none;
+}
+.slider_body .quarter {
+	height: 10px !important;
+    width: 10px !important;
+    display: inline-block;
+    position: absolute;
+    background: #b9b9b9;
+    border-radius: 100%;
+    top: -4px;
+    cursor: pointer;
+}
+.sliderLine {
+    height: 3px;
+    width: 0px;
+    border: none;
+    border-radius: 2px 0px 0px 2px;
+}
+.sliderLine.lineBlue {
+    background-color: #1e9dfb;
+}
+.sliderLine.lineRed{
+    background-color: #fe2407;
+}
+.sliderLine.lineGreen{
+    background-color: #1ab80a;
+}
+
+.dragBar {
+    height: 14px;
+    width: 14px;
+    border-radius:50%;
+    bottom: -6px;
+    background:#fff;
+    /*border:1px solid #fff;*/
+    position: absolute;
+    cursor: pointer;
+    margin-left: -4px;
+}
+.dragBar.gragBarGreen{
+	border: 1px solid #1ab80a;
+}
+.dragBar.gragBarRed{
+	border: 1px solid #fe2407;
+}
+
+.quarter.quarterGreen {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #1ab80a;
+    border-radius: 10px;
+    background-color: #1ab80a;
+
+}
+.quarter.quarterRed {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fe2407;
+    border-radius: 10px;
+    background-color: #fe2407;
+}
+.percentNum {
+	display: none;
+}
+
+/**滑动杠杆结束**/
